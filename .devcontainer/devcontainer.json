@@ -1,0 +1,16 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.166.1/containers/debian
+{
+	"name": "Fluence",
+	"image": "fluencelabs/devcontainer:latest",
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"extensions": [
+		"FluenceLabs.aqua-syntax-highlight",
+		"bpruitt-goddard.mermaid-markdown-syntax-highlighting"
+	],
+	"remoteUser": "root",
+	"postCreateCommand": "bash -i -c 'cd fluence; bash /download_examples.sh; bash /greetings.sh'",
+	"workspaceFolder": "${containerWorkspaceFolder}/fluence"
+}
